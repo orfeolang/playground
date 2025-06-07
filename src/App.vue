@@ -1,47 +1,64 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+// import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+    <div>
+      <img src="/favicon.svg" alt="orfeo" height="30px" />
+      <button>compile</button>
+      <select name="compiler-version" id="compiler-version">
+        <option value="0.2.0">v0.2.0</option>
+        <!-- <option value="0.1.1">v0.1.1</option> -->
+      </select>
+      <select name="examples" id="examples">
+        <option value="example 1">example 1</option>
+        <option value="example 2">example 2</option>
+      </select>
+      <button>save/share</button>
+    </div>
+    <div>
+      <a href="https://orfeolang.com">Orfeo's website</a>
     </div>
   </header>
-
   <main>
-    <TheWelcome />
+    <div id="code-windows">
+      <div id="editor" contenteditable="true">editor</div>
+      <div id="monitor"></div>
+    </div>
   </main>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
   header {
     display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    padding-inline: 5px;
+
+    div {
+      display: flex;
+      align-items: center;
+    }
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
+  #code-windows {
     display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+
+    div {
+      background: #121212;
+      width: 50%;
+      height: 100vh;
+      color: #ffffff;
+      padding: 5px;
+      font-size: 18px;
+    }
+
+    #monitor {
+      background: #222222;
+    }
   }
-}
 </style>

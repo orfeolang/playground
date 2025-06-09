@@ -1,0 +1,16 @@
+{
+    "0.2.0" : [
+        {
+            "name": "baby beat",
+            "orfeo": "a b c d | e f g h\n",
+            "musicline": "0 1 metro 60\n0 1 note a\n1 1 note b\n2 1 note c\n3 1 note d\n4 1 note e\n5 1 note f\n6 1 note g\n7 1 note h\n8 1 tail\n"
+        },
+        {
+            "name": "time signature jam",
+            "orfeo": "=2/2 a\n",
+            "musicline": "0 1 metro 60\n0 1 note a\n2 1 tail\n"
+        }
+    ],
+    "0.1.1" : [
+    ]
+}

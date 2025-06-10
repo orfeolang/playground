@@ -1,3 +1,6 @@
+# Editor bundle
+public/editor.bundle.js
+
 # Logs
 logs
 *.log
